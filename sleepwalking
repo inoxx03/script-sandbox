@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ARG=$1
+
+case "$ARG" in
+    start|START)
+	/tmp/sleepwalkingserver &
+	exit 0
+	;;
+    stop|STOP)
+	kill $(cat /tmp/sleep­walking­server.pid)
+	exit 0
+	;;
+    *)
+	echo "Usage sleepwalking start|stop"
+	exit 1
+esac
