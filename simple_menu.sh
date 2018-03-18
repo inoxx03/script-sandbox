@@ -9,12 +9,19 @@ read -p "What would you like to do? 1: Show disk usage, 2: Show system uptime, q
     case ${OPTION} in
       	    1)
 	        df -h
+		printf "\n"
 	        continue
     	        ;;
 	    2)
                 uptime
+		printf "\n"
 	        continue
 	        ;;
+	    3)
+		who
+		printf "\n"
+	        continue
+		;;
             q)
 	        echo "Goodbye!"
     	        break		
